@@ -12,7 +12,7 @@
   <link rel="icon" href="/wp-content/themes/olc/assets/img/favicon.ico" type="image/x-icon">
 
   <!-- This site is optimized with the Yoast SEO plugin v8.4 - https://yoast.com/wordpress/plugins/seo/ -->
-  <title>6Blended Learning Mastery Series: Research into Practice</title>
+  <title>8Blended Learning Mastery Series: Research into Practice</title>
   <meta name="description" content="Gain a deeper understanding of blended learning research and practice among teaching faculty members, instructional designers, and more." />
   <link rel="canonical" href="http://onlinelearningconsortium.org/learn/olc-new-institute-schedule/institute-offerings/?id=380&cohort=568" />
   <meta property="og:locale" content="en_US" />
@@ -1021,291 +1021,7 @@
                             </span>
                           </div>
                         </div>
-                      </div>
-                      <script>
-                        var otc_member = 0;
-                        var theMode = "Asynchronous Workshop";
-                        var theSynchDate = "12 : 00 ";
-                        var theCount = 1;
-                        var instituteID = 380;
-
-                        var theCohortStartDate = ["Aug 07"];
-
-                        var theCohortEndDate = ["Oct 02, 2019"];
-
-                        var cohortID = [572];
-                        var cartURL =
-                          "https://secure.onlinelearningconsortium.org";
-
-                        var cohortPackageSKU = "IN-" + instituteID;
-                        var cohortSKU = "IN-" + instituteID;
-                        var href = cartURL + "/olc-cart/add/IN-" + instituteID;
-                        var hrefPackage = cartURL + "/olc-cart/add/IN-" +
-                          instituteID;
-                        if (cohortID) {
-                          if (cohortID[0]) {
-                            cohortSKU = "IN-" + instituteID + '-' + cohortID[0];
-                            cohortPackageSKU = "IN-" + instituteID + '-' +
-                              cohortID[0] + '-package';
-                            href = cartURL + "/olc-cart/add/IN-" + instituteID +
-                              '-' + cohortID[0];
-                            hrefPackage = cartURL + "/olc-cart/add/IN-" +
-                              instituteID + '-' + cohortID[0] + "-package";
-                          }
-                        }
-
-                        var offeringType = "mastery_series";
-
-                        var cohortTitle =
-                          "Blended Learning Mastery Series: Research into Practice";
-
-                        var theOfferingId = instituteID.toString();
-                        var nonMemberPrice = "750.00";
-                        var memberPrice = "600.00";
-                        var output = [];
-                        var output2 = [];
-
-                        //add the title, pricing, and dates to the header
-                        $(function () {
-
-                          $('.theIndividualTitle').append(cohortTitle);
-
-                          //changing offering pricing based on what type of offering it is
-                          if (offeringType == 'workshop' || offeringType ==
-                            'self_paced_workshop') {
-                            $('.image').css('background-image',
-                              'url(https://onlinelearningconsortium.org/wp-content/themes/olc/assets/img/bg-gears.png)'
-                            );
-                            $('.price').css('visibility', 'visible');
-                            $('.price').replaceWith(
-                              '<span class="single-offering-prices">Member Price : $ ' +
-                              memberPrice +
-                              '<br /> Non Member Price : $ ' +
-                              nonMemberPrice + '</span>');
-                          }
-                          //check if its the one specific id cert offering
-                          if (theOfferingId == '401') {
-                            $('.image').css('background-image',
-                              'url(https://onlinelearningconsortium.org/wp-content/themes/olc/assets/img/bg-certificate.png)'
-                            );
-                            $('.image h3').css('margin-top', '8%');
-                            $('.price').css('visibility', 'visible');
-                            $('.price').replaceWith(
-                              '<span class="single-offering-prices">Member Price : $ ' +
-                              memberPrice +
-                              '<br /> Non Member Price : $ ' +
-                              nonMemberPrice + '</span>');
-                          } else if (offeringType == 'otc' && theOfferingId !=
-                            '401') {
-                            $('.image').css('background-image',
-                              'url(https://onlinelearningconsortium.org/wp-content/themes/olc/assets/img/bg-certificate.png)'
-                            );
-                            $('.price').css('visibility', 'visible');
-                            $('.price').replaceWith(
-                              '<span class="single-offering-prices"> Foundation Course Price : $ 1850 <br /> Foundation Course + 3 Electives : $ 2325</span>'
-                            );
-                            $('.otc-price').text(' $ 1850 ');
-                            $('.otc-price2').text(' $ 2325 ');
-                            $('.otc-electives-price').text('  $ 2000 ');
-                            $('.otc-electives-price2').text(' $ 2500 ');
-                            $('.electives-button').removeClass('disabled');
-
-                          } else if (offeringType == 'advanced_otc') {
-                            $('.image').css('background-image',
-                              'url(https://onlinelearningconsortium.org/wp-content/themes/olc/assets/img/bg-certificate.png)'
-                            );
-                            $('.image h3').css('margin-top', '8%');
-                            $('.price').css('visibility', 'visible');
-                            $('.price').replaceWith(
-                              '<span class="single-offering-prices">Member Price : $ ' +
-                              memberPrice +
-                              '<br /> Non Member Price : $ ' +
-                              nonMemberPrice + '</span>');
-
-                          } else if (offeringType == 'mastery_series') {
-                            $('.image').css('background-image',
-                              'url(https://onlinelearningconsortium.org/wp-content/themes/olc/assets/img/bg-gradhat.png'
-                            );
-                            $('.price').css('visibility', 'visible');
-                            $('.price').replaceWith(
-                              '<span class="single-offering-prices">Member Price : $ ' +
-                              memberPrice +
-                              '<br /> Non Member Price : $ ' +
-                              nonMemberPrice + '</span>');
-                          } else {
-                            $('.price').replaceWith(
-                              '<span class="single-offering-prices"> </span>'
-                            );
-                          }
-                          //end the pricing adjustment
-
-                          //check for Synchronous
-                          if (theMode == "Synchronous Workshop") {
-                            $('.mainDate').append(theCohortStartDate[0] +
-                              ' - ' + theCohortEndDate[0] + ' ' +
-                              theSynchDate + ' ET');
-                          } else {
-                            if (offeringType == "self_paced_workshop") {
-                              $('.mainDate').append('Ongoing Offering');
-                            } else {
-                              console.log(theCohortStartDate[0]);
-                              $('.mainDate').append(theCohortStartDate[0] +
-                                ' - ' + theCohortEndDate[0]);
-                            }
-                          }
-                          //this adds button and sku for OTC cert + electives except for ID cert
-                          var theOffering = instituteID.toString();
-
-
-                          if (offeringType == 'otc' && theOfferingId !=
-                            '401') {
-
-                            //    var cohortPackageSKU = cartURL + "/olc-cart/add/IN-" + instituteID + '-' + cohortID[0] + '-package';
-                            //  var newUrl = "";
-                            $('.otc-price2').after(
-                              '<a id="otc-but-1" class="add-to-cart btn btn-primary purchasecreate-first " data-sku="" data-post-id="" href="">Purchase</a>'
-                            );
-                            $('.purchasecreate-first').attr('data-sku',
-                              cohortPackageSKU);
-                            $('.purchasecreate-first').attr('href',
-                              hrefPackage);
-                            $('#foundation-course').attr('data-sku',
-                              cohortSKU);
-                            $('#foundation-course').attr('href', href);
-                            $('.image h3').css('margin-top', '8%');
-                            $('a.purchasecreate-first').text(
-                              'Foundation + 3 Workshops');
-                            //                                              $('.add-to-cart').after('<a class="add-to-cart btn btn-primary purchasecreate-second" data-sku="" data-post-id="" href="">Purchase</a>');
-                            $('.otc-electives-price2').after(
-                              '<a id="otc-but-2" class="add-to-cart btn btn-primary purchasecreate-second electives-button disabled" data-sku="" data-post-id="" href="">Purchase</a>'
-                            );
-                            $('.purchasecreate-second').attr('data-sku',
-                              cohortPackageSKU);
-
-                            $('.purchasecreate-second').attr('href',
-                              hrefPackage);
-                            $('a.purchasecreate-second').text(
-                              'Foundation + Mastery Series');
-                            $('.electives-button').removeClass('disabled');
-
-
-                          } else if (theOfferingId == '401') {
-                            $('.purchasecreate-first').attr('data-sku',
-                              cohortSKU);
-                            $('.purchasecreate-first').attr('href', href);
-                            $('a.purchasecreate-first').text('Register');
-                          } else {
-
-                            $('.add-to-cart').attr('data-sku', cohortSKU);
-                            $('.add-to-cart').attr('href', href);
-
-
-                            //here well check for a non existent cohort in everything except for self paced (that makes it here anyway)
-                            if (offeringType !== 'self_paced_workshop' && !
-                              cohortID[0]) {
-                              $('.add-to-cart').replaceWith(
-                                '<span > No Currently Available Dates</span>'
-                              );
-                            }
-                          }
-
-                        });
-
-                        if (theCount > 0) {
-                          for (var i = 0; i < theCount; i++) {
-
-                            var cohortStartDate = theCohortStartDate[i];
-                            var cohortEndDate = theCohortEndDate[i];
-                            var cohortInsId = instituteID;
-                            var cohortCohId = cohortID[i];
-
-                            var cohHref = cartURL + "/olc-cart/add/IN-" +
-                              instituteID + '-' + cohortID[i];
-                            var cohHrefPackage = cohHref + "-package";
-                            var cohSKU = "IN-" + instituteID + '-' + cohortID[i];
-                            var cohortPackageSKUs = "IN-" + instituteID + '-' +
-                              cohortID[i] + '-package';
-
-
-                            //if the offering is not the next one load into array for appending to sidebar
-                            if (i > 0 && i < 4) {
-                              if (offeringType == "otc" && cohortInsId != 401) {
-                                output[i] =
-                                  '<div style="padding-bottom: 2%; padding-left: 3%; border-bottom: 1px solid grey;" ><span class="cohort-item"><span class="cohort-item-dates">' +
-                                  cohortStartDate + ' - ' + cohortEndDate +
-                                  '</span><br/>Foundation Only : <span class="cohort-item-link"><a style="margin-left: 0%;" href="' +
-                                  cohHref +
-                                  '" class="main-but4">Register</a></span> <br /> Foundation + Electives : <span class="cohort-item-link"><a style="margin-left: 0%;" href="' +
-                                  cohHrefPackage +
-                                  '" class="main-but4 add-to-cart" data-sku="' +
-                                  cohortPackageSKUs +
-                                  '"  >Register</a></span></span><br /></div>';
-                              } else {
-                                output[i] =
-                                  '<div style="padding-bottom: .5%; padding-left: 3%"><span class="cohort-item"><span class="cohort-item-dates">' +
-                                  cohortStartDate + ' - ' + cohortEndDate +
-                                  '</span><span class="cohort-item-link"><a style="margin-left: 0%;" href="' +
-                                  cohHref +
-                                  '" class="main-but4">Register</a></span></span></div><br/>';
-                              }
-
-                            }
-                            //supposed to cut off after three and hide.  this checks for that
-                            if (i >= 4) {
-                              if (offeringType == "otc" && cohortInsId != 401) {
-                                output2[i] =
-                                  '<div style="padding-bottom: 2%; padding-left: 3%; border-bottom: 1px solid grey;" ><span class="cohort-item"><span class="cohort-item-dates">' +
-                                  cohortStartDate + ' - ' + cohortEndDate +
-                                  '</span><br />Foundation Only : <span class="cohort-item-link"><a  href="' +
-                                  cohHref +
-                                  '" class="main-but4">Register</a></span> <br /> Foundation + Electives : <span class="cohort-item-link"><a style="margin-left: 0%;" href="' +
-                                  cohHrefPackage +
-                                  '" class="main-but4 add-to-cart" data-sku="' +
-                                  cohortPackageSKUs +
-                                  '"  >Register</a></span></span></div>';
-                              } else {
-                                output2[i] =
-                                  '<div style="padding-bottom: .5%; padding-left: 3%" ><span class="cohort-item"><span class="cohort-item-dates">' +
-                                  cohortStartDate + ' - ' + cohortEndDate +
-                                  '</span><span class="cohort-item-link"><a href="' +
-                                  cohHref +
-                                  '" class="main-but4">Register</a></span></span></div><br />';
-                              }
-                            }
-
-                          }
-
-                          //append following dates to sidebar
-                          $(function () {
-                            if (output && output.length == 0) {
-                              output[0] = "No Following Dates";
-                            }
-
-                            $('.items').append(output.join(' '));
-                            //this is appending the hidden stuff to the sidebar.... show more needs to be set up as a link which disappears when clicked
-
-
-                            var showLess =
-                              '<div class="learn-more-show-less center">Show Less</div>';
-                            $('.items').append(
-                              '<div class="the-hidden-following-dates hidden3">' +
-                              output2.join('') + showLess + '</div>');
-                            $('.items').append(
-                              "<div class='show-more-dates-hidden center'>Show More Dates</div>"
-                            );
-
-                            //hide the show more dates link if less than 4
-
-                            if (theCount < 5) {
-                              $('.show-more-dates-hidden').css('display',
-                                'none');
-                            }
-
-                          });
-                        }
-                        //alert(cohortStartDate);
-                      </script>
-                      <!--                           end check for dates and bios-->
+                      </div>              end check for dates and bios-->
 
 
                     </div>
@@ -1319,77 +1035,9 @@
             <div class="col-xs-12 col-sm-12 col-lg-12" style="margin-top: 5%;"
               id="button-div-2">
               <a class=" main-but4" href="https://onlinelearningconsortium.org/learn/olc-new-institute-schedule/">
-                << Back to Institute Schedule</a> </div> </div> <script type="text/javascript">
-                  $(function() {
-                  $( "#otc-but-1" ).click(function() {
-                  $("#edit-attributes-133-657-wrapper").css("display",
-                  "block");
-                  });
-                  $(document).ready(function() {
-                  $(".purchasecreate-second").removeClass("disabled");
-                  });
-
-
-
-                  });
-                  </script>
+                << Back to Institute Schedule</a> </div> </div> 
       </main><!-- /.main -->
-      <aside class="sidebar col-sm-12 col-md-8 col-lg-8 hidden-xs" role="complementary">
-        <div id="text-35" class="sidebar-widget widget_text">
-          <div class="textwidget">
-            <style>
-              .newsItems h5{
-margin-bottom: 0;
-    background: #a9d135;
-    color: #fff;
-    font-size: 14px;
-    font-weight: bold;
-    text-align: center;
-    padding: 13px 0;
-    line-height: 14px;
-    text-transform: uppercase;
-border-top: 1px solid #ccc;
-border-left: 1px solid #ccc;
- border-right: 1px solid #ccc;}
-.items{
-width:100%; height:auto; border-left: 1px solid #ccc;
- border-right: 1px solid #ccc;
- border-bottom: 1px solid #ccc;
-
-
-}
-.newsItems{
-margin-bottom: 3%;
-}
-.item {
-padding-left: 5%;
-padding-right: 5%;
-padding-top: 5%;
-display: block;
-text-align: center;
-}
-}
-</style>
-            <div class="newsItems">
-              <h5>Additional Dates</h5>
-              <div class="items"><span class="item"></span></div>
-            </div>
-          </div>
-        </div>
-        <div id="nav_menu-32" class="sidebar-widget widget_nav_menu">
-          <h5 class="widgettitle">Workshop Information</h5>
-          <ul id="menu-workshops" class="menu">
-            <li class="menu-find-a-workshop"><a href="https://onlinelearningconsortium.org/learn/workshops/">FIND
-                A WORKSHOP</a></li>
-            <li class="menu-olc-workshop-pass"><a href="https://onlinelearningconsortium.org/learn/olc-workshop-pass/">OLC
-                Workshop Pass</a></li>
-            <li class="menu-institute-policies"><a href="https://onlinelearningconsortium.org/learn/our-workshop-model/">Institute
-                Policies</a></li>
-            <li class="menu-technical-requirements"><a href="https://onlinelearningconsortium.org/learn/workshop-technical-requirements/">Technical
-                Requirements</a></li>
-          </ul>
-        </div>
-      </aside><!-- /.sidebar -->
+      
     </div>
   </div><!-- /.content -->
 
@@ -1405,10 +1053,7 @@ text-align: center;
             <div id="footer-social-links">
             </div>
             <p>
-              <script>
-                $('#footer-social-links').replaceWith($('#menu-social-links').clone()
-                  .attr('id', 'menu-social-links-2'));
-              </script>
+             
             </p>
           </div>
         </section>
@@ -1504,70 +1149,14 @@ text-align: center;
       </div>
     </div>
   </footer>
-  <script type="text/javascript">
-    var rumMOKey = '73da4bab2a99afe8d45184ab9f9b9dcc';
-    (function () {
-      if (window.performance && window.performance.timing && window.performance
-        .navigation) {
-        var site24x7_rum_beacon = document.createElement('script');
-        site24x7_rum_beacon.async = true;
-        site24x7_rum_beacon.setAttribute('src',
-          '//static.site24x7rum.com/js/rum-beacon-min.js');
-        document.getElementsByTagName('head')[0].appendChild(
-          site24x7_rum_beacon);
-      }
-    })(window)
-  </script>
+ 
   <div class="scroll-back-to-top-wrapper">
     <span class="scroll-back-to-top-inner">
       <i class="fa fa-3x fa-arrow-circle-up"></i>
     </span>
   </div>
-  <script type='text/javascript'>
-    /* <![CDATA[ */
-    var wpcf7 = {
-      "apiSettings": {
-        "root": "https:\/\/onlinelearningconsortium.org\/wp-json\/contact-form-7\/v1",
-        "namespace": "contact-form-7\/v1"
-      },
-      "recaptcha": {
-        "messages": {
-          "empty": "Please verify that you are not a robot."
-        }
-      }
-    };
-    /* ]]> */
-  </script>
+  
 
-  <script type='text/javascript'>
-    /* <![CDATA[ */
-    var spuvar = {
-      "is_admin": "",
-      "l18n": {
-        "wait": "Please wait",
-        "seconds": "seconds ",
-        "name_error": "Please enter a valid name",
-        "email_error": "Please enter a valid email"
-      },
-      "disable_style": "",
-      "safe_mode": "",
-      "ajax_mode": "",
-      "site_url": "https:\/\/onlinelearningconsortium.org\/",
-      "ajax_mode_url": "https:\/\/onlinelearningconsortium.org\/?spu_action=spu_load&lang=",
-      "ajax_url": "https:\/\/onlinelearningconsortium.org\/wp-admin\/admin-ajax.php",
-      "pid": "30547",
-      "is_front_page": "",
-      "is_category": "",
-      "is_archive": "",
-      "is_search": "",
-      "seconds_confirmation_close": "5",
-      "dsampling": "",
-      "dsamplingrate": "",
-      "disable_stats": ""
-    };
-    var spuvar_social = [];
-    /* ]]> */
-  </script>
   
   <div class="download-form-form-modal" style="width:0;height:0">
     <form id="download-form" target="download_iframe" action="https://onlinelearningconsortium.org/wp-content/plugins/olc-download/download.php"
